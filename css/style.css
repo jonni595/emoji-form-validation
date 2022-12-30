@@ -26,8 +26,8 @@ body {
 :root {
   --bg-color: #202124;
   --title-color: #FFFFFF;
-  --bd-color: #222222;
-  --text-color: #5F6368 ;
+  --bd-color: #D8D8D8;
+  --text-color: #5F6368;
 }
 
 h1, h2, h3 {
@@ -55,6 +55,30 @@ h1 {
 
 p {
   color: var(--text-color);
+}
+
+input {
+  font-family: inherit;
+  outline: none;
+}
+
+.form-field {
+  position: relative;
+}
+
+.form-field .icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.form-input {
+  width: 35rem;
+  border-radius: 0.5rem;
+  border: 2px solid var(--bd-color);
+  font-size: 1.7rem;
+  padding: 1rem 1.7rem 1rem 2.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
