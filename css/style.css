@@ -1,0 +1,36 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --bg-color: #202124;
+  --title-color: #FFFFFF;
+  --bd-color: #222222;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  line-height: 1.1;
+  margin-top: 0;
+  color: var(--title-color);
+}
+
+p {
+  font-size: 1.7rem;
+}
+
+/*# sourceMappingURL=style.css.map */
