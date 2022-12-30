@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   box-sizing: border-box;
   height: 100%;
@@ -19,7 +20,7 @@ body {
   line-height: 1.5;
 }
 
-.icon {
+.form__icon {
   font-size: 2rem;
 }
 
@@ -28,6 +29,8 @@ body {
   --title-color: #FFFFFF;
   --bd-color: #D8D8D8;
   --text-color: #5F6368;
+  --bd-color-valid: #4FD3C4;
+  --bd-color-invalid: #FF5677;
 }
 
 h1, h2, h3 {
@@ -57,28 +60,44 @@ p {
   color: var(--text-color);
 }
 
-input {
+input[type=password] {
   font-family: inherit;
   outline: none;
 }
 
-.form-field {
+.form__field {
   position: relative;
 }
 
-.form-field .icon {
+.form__field .form__icon {
   position: absolute;
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.form-input {
+.form__input {
   width: 35rem;
   border-radius: 0.5rem;
-  border: 2px solid var(--bd-color);
+  border: 3px solid var(--bd-color);
   font-size: 1.7rem;
   padding: 1rem 1.7rem 1rem 2.5rem;
+}
+
+.form__input:valid {
+  border-color: var(--bd-color-valid);
+}
+
+.form__input:valid + .form__icon::after {
+  content: "😃";
+}
+
+.form__input:invalid {
+  border-color: var(--bd-color-invalid);
+}
+
+.form__input:invalid + .form__icon::after {
+  content: "😳";
 }
 
 /*# sourceMappingURL=style.css.map */

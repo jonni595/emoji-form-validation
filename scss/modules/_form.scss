@@ -1,23 +1,35 @@
-input {
-    font-family: inherit;
-    outline: none;
+input[type="password"] {
+  font-family: inherit;
+  outline: none;
 }
 
-.form-field {
-    position: relative;
+.form__field {
+  position: relative;
 }
 
-.form-field .icon {
+.form__field .form__icon {
     position: absolute;
     right: 1rem;
     top: 50%;
     transform: translateY(-50%);
 }
 
-.form-input {
-    width: 35rem;
-    border-radius: 0.50rem;
-    border: 2px solid var(--bd-color);
-    font-size: 1.7rem;
-    padding: 1rem 1.7rem 1rem 2.5rem;
+.form__input {
+  width: 35rem;
+  border-radius: 0.5rem;
+  border: 3px solid var(--bd-color);
+  font-size: 1.7rem;
+  padding: 1rem 1.7rem 1rem 2.5rem;
 }
+
+.form__input:valid { border-color: var(--bd-color-valid); }
+
+.form__input:valid + .form__icon::after {
+    content: '😃';
+}
+
+.form__input:invalid { border-color: var(--bd-color-invalid) }
+
+.form__input:invalid + .form__icon::after {
+    content: "😳";
+  }
